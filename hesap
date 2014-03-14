@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+
+public class DenemeMain {
+
+	
+	public static void main(String[] args) {
+	
+		int number1,number2;
+		int choice;
+		float sum = 0;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.printf("Enter first number: ");
+		number1 = scan.nextInt();
+		
+		System.out.print("Enter second number: ");
+		number2 = scan.nextInt();
+		
+	
+		
+		
+		System.out.print("İşleminizi seçiniz:(Toplama için 1'e\n Çıkarma için 2'ye\n Çarpma için 3'e\n Bölme için 4'e basınız..) ");
+		choice = scan.nextInt();
+		
+		switch (choice) {
+		case 1:
+			sum = number1 + number2;
+			System.out.println("Toplama sonucu: " + sum);
+			
+			break;
+
+		case 2:
+			sum = number1 - number2;
+			System.out.println("Çıkarma sonucu: " + sum);
+			
+			break;
+		case 3:
+			sum = number1 * number2;
+			System.out.println("Çarpma sonucu: " + sum);
+		case 4:
+			sum =(float) number1 / number2;
+			System.out.println("Bölme sonucu: " + sum);
+			
+			break;
+		default:
+			System.out.println("yanlış giriş yaptınız. ");
+			main(args);
+			break;
+		}
+		
+		
+	}
+	
+}
